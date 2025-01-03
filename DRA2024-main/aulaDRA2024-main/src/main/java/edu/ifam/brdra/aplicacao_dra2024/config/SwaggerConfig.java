@@ -12,8 +12,8 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("API Pessoa - Aplicação DRA 2024")
+                        .title("API Voluntario - Aplicação DRA 2024")
                         .version("1.0.0")
-                        .description("Documentação da API para gerenciar pessoas na Aplicação DRA 2024"));
+                        .description("Documentação da API para gerenciar voluntarios no BD DRA AVALIAÇÃO"));
     }
 }

@@ -1,10 +1,13 @@
 package edu.ifam.brdra.aplicacao_dra2024.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
-public class Cidade {
+public class Pais {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,10 +15,6 @@ public class Cidade {
 
     @NotNull
     private String nome;
-
-    @ManyToOne
-    @NotNull
-    private Pais pais;
 
     // Getters e Setters
 
@@ -35,20 +34,11 @@ public class Cidade {
         this.nome = nome;
     }
 
-    public Pais getPais() {
-        return pais;
-    }
-
-    public void setPais(Pais pais) {
-        this.pais = pais;
-    }
-
     @Override
     public String toString() {
-        return "Cidade{" +
+        return "Pais{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", pais=" + pais +
                 '}';
     }
 }
